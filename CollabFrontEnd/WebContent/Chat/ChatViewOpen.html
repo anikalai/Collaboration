@@ -1,0 +1,20 @@
+<div ng-include="'Chat/ChatHome.html'"></div>
+<div ng-controller="ChatController as ctrl">
+<h1><center>List of Avtive Open Chats</center></h1>
+<table class="table table-hover table-bordered">
+    <thead>
+      <tr>
+        <th>Chat Topic</th>
+        <th>Chat Creator</th>
+        <th>Join Chat</th>
+      </tr>
+    </thead>
+    <tbody>
+    	<tr ng-repeat="x in chats">
+    	<td>{{x.chatTopic}}</td>
+    	<td>{{x.creatorID}}</td>
+    	<td><button class="btn btn-default" ng-click="ctrl.joinOpenChat(x.chatId)">Join Chat</button></td>
+	    </tr>
+    </tbody>
+</table>
+</div>

@@ -1,0 +1,22 @@
+<div ng-include="'Forum/ForumHome.html'"></div>
+<div ng-controller="ForumController as ftrl">
+<center>
+<h2>Start a new Forum by entering the forum Name</h2>
+<form ng-submit="ftrl.createForum()" class="form-horizontal">
+<div class="form-group">
+    <label class="control-label col-sm-2" for="forumName">Forum Name :</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="forumName" placeholder="Enter Forum Name"  ng-model="ftrl.forum.forumName">
+    </div>
+  </div>
+  <div class="form-group">
+  	<label for="forumData">Forum Description:</label>
+  	<textarea class="form-control" rows="20" id="forumData" ng-model="ftrl.forum.forumData"></textarea>
+  </div>
+  <div class="form-group"> 
+    <div class="col-sm-offset-2 col-sm-10">
+	<input type="submit" value="Start Forum">
+	</div>
+</form>
+</center>
+</div>

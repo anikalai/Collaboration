@@ -1,0 +1,21 @@
+<div ng-include="'User/FriendHome.html'"></div>
+<div ng-controller="UserController as ctrl">
+<div class="container">
+  <h2>Your Friends</h2>
+  <table class="table table-hover table-bordered">
+    <thead>
+      <tr>
+        <th>Sender Id</th>
+        <th>Accept Request</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="x in friends">
+        <td>{{x.friendId}}</td>        
+        <td><button class="btn btn-default" ng-click='ctrl.acceptRequest(x.friendId)' >Add</button>
+        <button class="btn btn-default" ng-click='ctrl.rejFriend(x.friendId)' >Reject</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>

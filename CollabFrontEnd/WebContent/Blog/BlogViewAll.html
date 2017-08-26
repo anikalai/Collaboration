@@ -1,0 +1,34 @@
+
+<div ng-include="'Blog/BlogHome.html'"></div>
+<div class="w3-container w3-content"
+	style="max-width: 1400px; margin-top: 20px"></div>
+<div class="w3-col m10" ng-controller="BlogController as btrl">
+
+
+	<div class="w3-container w3-card-2 w3-white w3-round w3-margin"
+		ng-repeat="b in blogs">
+		<br> <span class="w3-right w3-opacity">{{b.lastUpdateDate}}</span>
+		<h4>{{b.blogName}}</h4>
+		<p>created by {{b.blogCreatorId}}</p>
+		<br>
+		<hr class="w3-clear">
+		<p>{{b.blogDescription}}.</p>
+
+		<div style="float: left;">
+
+			<a href="" type="button" class="w3-btn w3-theme w3-margin-bottom"
+				ng-click="btrl.likeBlog(b.blogID)"> <i class="fa fa-thumbs-up">{{b.blogLikes}}</i>
+				Like
+			</a>
+			<!-- <a type="button"
+				class="w3-btn w3-theme w3-margin-bottom"> <i
+				class="fa fa-commenting-o" aria-hidden="true"></i> Comments
+			</a> -->
+		</div>
+
+		<div style="float: right">
+			<button type="button" class="w3-btn w3-theme w3-margin-bottom"
+				ng-click='btrl.viewBlog(b.blogID)'>View Blog</button>
+		</div>
+	</div>
+</div>

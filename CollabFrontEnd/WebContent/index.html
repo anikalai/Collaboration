@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>GetConnected</title>
+<!-- Angular -->
+<script type="text/javascript" src="lib/Angular/angular.js"></script>
+<script type="text/javascript" src="lib/Angular/angular-route.js"></script>
+<script type="text/javascript" src="lib/Angular/angular-cookies.js"></script>
+<script type="text/javascript" src="lib/Angular/angular-messages.js"></script>
+<script type="text/javascript" src="lib/Angular/angular-resource.js"></script>
+<script type="text/javascript" src="lib/Angular/angular-touch.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+
+<!-- JQUery -->
+<script type="text/javascript" src="lib/JQuery/jquery-3.1.1.min.js"></script>
+
+<!-- Bootstrap -->
+<script type="text/javascript" src="lib/Bootstrap/bootstrap.js"></script>
+<link rel="stylesheet" href="lib/Bootstrap/bootstrap.min.css">
+<link rel="stylesheet" href="lib/Bootstrap/w3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Other js -->
+<script type="text/javascript" src="lib/js/lodash.js"></script>
+<script type="text/javascript" src="lib/js/sockjs.js"></script>
+<script type="text/javascript" src="lib/js/stomp.js"></script>
+
+<!-- Controller and Service -->
+<script type="text/javascript" src="js/User/UserService.js"></script>
+<script type="text/javascript" src="js/User/UserController.js"></script>
+<script type="text/javascript" src="js/Blog/BlogController.js"></script>
+<script type="text/javascript" src="js/Blog/BlogService.js"></script>
+<script type="text/javascript" src="js/Forum/ForumController.js"></script>
+<script type="text/javascript" src="js/Forum/ForumService.js"></script>
+<script type="text/javascript" src="js/Chat/ChatController.js"></script>
+<script type="text/javascript" src="js/Chat/ChatService.js"></script>
+<script type="text/javascript" src="js/Job/JobController.js"></script>
+<script type="text/javascript" src="js/Job/JobService.js"></script>
+<script type="text/javascript" src="SocketChat/ChatMsgController.js"></script>
+<script type="text/javascript" src="SocketChat/ChatMsgService.js"></script>
+
+<style>
+.myAlign {
+	margin-right: 80px;
+    margin-left: 80px;
+    }
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('lib/Bootstrap/fonts/glyphicons-halflings-regular.eot');
+  src: url('lib/Bootstrap/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('lib/Bootstrap/fonts/glyphicons-halflings-regular.woff') format('woff'), url('lib/Bootstrap/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('lib/Bootstrap/fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
+body {
+  background-image:url(http://paper-backgrounds.com/textureimages/2012/03/Natural-Paper-Background-Texture-Vintage-HD.jpg);
+} 
+/* Set black background color, white text and some padding */
+footer {
+	 background: transparent !important;}
+}
+
+li {
+	display: inline;
+}
+</style>
+<script>
+$(document).ready(function(){
+    $('[data-toggle="toolti"]').tooltip();   
+});
+</script>
+</head>
+<body ng-app="myApp">
+<div class="myAlign">
+<div ng-view></div>
+</div>
+</body>
+</html>

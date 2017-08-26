@@ -1,0 +1,27 @@
+<div ng-include="'Forum/ForumHome.html'"></div>
+<div ng-controller="ForumController as ftrl">
+	<div class="w3-container w3-card-2 w3-white w3-round w3-margin">
+		<center>
+			<h1>{{forum.forumName}}</h1>
+		</center>
+		<br>
+		<p>{{forum.forumData}}</p>
+		<hr class="w3-clear">
+		<!-- <center>
+			<h4>Posts</h4>
+		</center> -->
+		<div class="w3-container w3-card-2 w3-white w3-round w3-margin" ng-repeat="x in forum.messages">
+			<p>
+			posted by {{x.userId}} on {{x.msgTime}}<br /> {{x.msgData}}
+			</p>
+			<!-- <div ng-if="x.reportMessage==='N'"><button class="btn btn-danger" ng-click="ftrl.reportMessage(x.forumMessageID)">Report Message</button></div>
+<div ng-if="x.reportMessage==='Y'">This message has been reported</div> -->
+		</div>
+		<form ng-submit="ftrl.submitMessage()" id="msgForm">
+			<textarea rows="8" cols="40" form="msgForm"
+				ng-model="ftrl.message.msgData">Enter Message...</textarea>
+			<br /> <input class="btn btn-primary" type="submit" value="Post Message">
+		</form>
+		<br>
+	</div>
+</div>

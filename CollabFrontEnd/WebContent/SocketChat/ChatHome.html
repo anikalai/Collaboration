@@ -1,0 +1,21 @@
+<div ng-include="'Chat/ChatHome.html'"></div>
+<center><h1>Chat using Sockets</h1></center>
+<div ng-if="chat.isPrivateChat==='N'">
+<center><h1>{{chat.chatTopic}}</h1></center>
+</div>
+<div ng-if="chat.isPrivateChat==='Y'">
+<center><h1>Private Chat : {{chat.creatorID}} {{chat.friendID}}</h1></center>
+</div>
+<center>
+<div ng-controller="ChatMsgController as ctrl">
+<form ng-submit="addSocketMessage()">
+<input type="text" ng-model=message.message />
+<input type="submit" value="Send">
+
+<p ng-repeat="message in messages" class="message">
+	<time>{{message.time | date:'HH:mm'}}</time> {{message.userID}}
+    <span ng-class="{self: message.self}">{{message.message}}</span>
+</p>
+</form>
+</div>
+</center>

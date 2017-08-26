@@ -1,0 +1,28 @@
+<div ng-include="'Job/JobHome.html'"></div>
+<div ng-controller="JobController as jtrl">
+<center><h2>Available Jobs</h2></center>
+<table class="table table-hover table-bordered">
+    <thead>
+      <tr>
+        <th>Job Name</th>
+        <th>Job Description</th>
+        <th>Job Salary</th>
+        <th>Job Status</th>
+        <div ng-if="isUser">
+        <th>Apply</th>
+        </div>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="x in jobs">
+        <td>{{x.jobName}}</td>
+        <td>{{x.jobDescription}}</td>
+        <td>{{x.jobSalary}}</td>    
+        <td>{{x.jobStatus}}</td> 
+		<div ng-if="isUser">
+        <td><button class="btn btn-default" ng-click='jtrl.applyJob(x.jobId)' >Apply jobs</button></td>
+        </div>
+      </tr>
+    </tbody>
+    </table>
+</div>

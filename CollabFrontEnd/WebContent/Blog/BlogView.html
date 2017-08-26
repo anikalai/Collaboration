@@ -1,0 +1,34 @@
+<div ng-include="'Blog/BlogHome.html'"></div>
+<div ng-controller="BlogController as btrl">
+	<div class="w3-container w3-card-2 w3-white w3-round w3-margin">
+		<center>
+			<h1>{{blog.blogName}}</h1>
+		</center>
+		<br> <span class="w3-right w3-opacity">{{blog.lastUpdateDate}}</span>
+		<h3>Created By {{blog.blogCreatorId}}</h3>
+		<p>{{blog.blogData}}</p>
+		<hr class="w3-clear">
+		<p>{{blog.blogDescription}}.</p>
+		<center>
+			<h4>Comments</h4>
+		</center>
+		<div class="w3-container w3-card-2 w3-white w3-round w3-margin" ng-repeat="x in comments">
+			<p>
+			 posted by {{x.commentUserId}} on {{x.commentDate}}<br /> {{x.commentText}}<br />
+			</p>
+			<!-- <div ng-if="x.reportComment==='Y'">This comment has been
+				reported the admin will review it</div>
+			<div ng-if="x.reportComment==='N'">
+				<button class="btn btn-danger"
+					ng-click="btrl.reportComment(x.commentID)">Report Comment</button>
+				<br />
+			</div> -->
+		</div>
+		<form ng-submit="btrl.submitComment()" id="cmtForm">
+			<textarea rows="8" cols="40" form="cmtForm"
+				ng-model="btrl.comment.commentText">Enter Comment...</textarea>
+			<br /> <input class="btn btn-primary" type="submit" value="Post Comment">
+		</form>
+		<br>
+	</div>
+</div>

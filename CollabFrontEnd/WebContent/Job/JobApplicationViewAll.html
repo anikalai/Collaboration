@@ -1,0 +1,24 @@
+<div ng-include="'Common/CommonHeader.html'"></div>
+<div ng-controller="JobController as jtrl">
+<table class="table table-hover table-bordered">
+    <thead>
+      <tr>
+        <th>Job Applicant ID</th>
+        <th>Job Applied ID</th>
+        <th>Job Applicant Details</th>
+        <th>Job Application status</th>
+        <th>Accept/Reject</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="x in jobsApplications">
+        <td>{{x.jobApplicantId}}</td>
+        <td>{{x.jobAppliedId}}</td>
+        <td>{{x.applicantDetails}}</td>    
+        <td>{{x.applicationStatus}}</td> 
+        <td><button class="btn btn-default" ng-click='jtrl.acceptJobAppl(x.jobApplicationId)' >Accept</button>
+        <button class="btn btn-default" ng-click='jtrl.rejectJobAppl(x.jobApplicationId)' >Reject</button></td>
+      </tr>
+    </tbody>
+    </table>
+</div>

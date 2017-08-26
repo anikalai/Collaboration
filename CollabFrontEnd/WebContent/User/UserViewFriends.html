@@ -1,0 +1,24 @@
+<div ng-include="'User/FriendHome.html'"></div>
+<div ng-controller="UserController as ctrl">
+<div class="container">
+  <h2>Your Friends</h2>
+  <table class="table table-hover table-bordered">
+    <thead>
+      <tr>
+        <th>Friend Id</th>
+        <!-- <th>Friend Status</th> -->
+        <th>Online Status</th>
+        <th>Start Chat</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="x in friends">
+        <td>{{x.friendId}}</td>
+        <!-- <td>{{x.friendStatus}}</td> -->
+        <td>{{x.isOnline}}</td>
+        <td><button class="btn btn-default" ng-click='ctrl.startChat(x.friendId)' >Start Chat</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>

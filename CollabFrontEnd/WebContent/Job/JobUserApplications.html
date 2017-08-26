@@ -1,0 +1,19 @@
+<div ng-include="'Job/JobHome.html'"></div>
+<div ng-controller="JobController as jtrl">
+<table class="table table-hover table-bordered">
+    <thead>
+      <tr>
+        <th>Job Applied ID</th>
+        <th>Job Applicant Details</th>
+        <th>Job Application status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="x in myjobs">
+        <td>{{x.jobAppliedId}}</td>
+        <td>{{x.applicantDetails}}</td>    
+        <td>{{x.applicationStatus}}</td> 
+      </tr>
+    </tbody>
+    </table>
+</div>

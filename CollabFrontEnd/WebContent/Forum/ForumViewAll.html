@@ -1,0 +1,25 @@
+<div ng-include="'Forum/ForumHome.html'"></div>
+<div class="w3-container w3-content"
+	style="max-width: 1400px; margin-top: 20px"></div>
+<div class="w3-col m10" ng-controller="ForumController as ftrl">
+	<div class="container">
+		<h2>Available Forums</h2>
+		<div class="w3-container w3-card-2 w3-white w3-round w3-margin"
+			ng-repeat="x in forums">
+			<h4>{{x.forumName}}</h4>
+			<hr class="w3-clear">
+			<p>{{x.forumData}}.</p>
+			<div style="float: right">
+				<button type="button" class="w3-btn w3-theme w3-margin-bottom"
+					ng-click='ftrl.viewForum(x.forumId)'>Join Forum</button>
+			</div>
+			<div ng-if="isAdmin" style="float: left">
+				<button type="button" class="w3-btn w3-theme w3-margin-bottom"
+					ng-click="ftrl.removeMessage(x.forumId)">Delete Forum</button>
+			</div>
+
+		</div>
+
+
+	</div>
+</div>

@@ -1,0 +1,14 @@
+<div ng-include="'Common/CommonHeader.html'"></div>
+<div ng-controller="ForumController as ftrl">
+<center>
+<div class="row">
+
+<button type="button" class="btn btn-success" ng-click="ftrl.getForums()">View Forums</button>
+<div ng-if="isAdmin">
+  <button type="button" class="btn btn-success" onclick=""><a href="#!/goForumCreate">Create Forum</a></button>
+  <!-- <button type="button" class="btn btn-success" ng-click="ftrl.manageForum()">Manage Forums</button>
+  <button type="button" class="btn btn-success" ng-click="">Update Forum</button>-->
+</div>
+</div>
+</center>
+</div>

@@ -1,0 +1,29 @@
+<div ng-include="'Chat/ChatHome.html'"></div>
+<div ng-controller="ChatController as ctrl">
+<center>
+<form ng-submit="ctrl.createChat()" class="form-horizontal">
+<div class="form-group">
+    Chat type:<br/>
+    <div class="radio">
+      <label><input type="radio" ng-model="ctrl.chat.isPrivateChat" value="Y">Private Chat</label>
+    </div>
+    <div class="radio">
+      <label><input type="radio" ng-model="ctrl.chat.isPrivateChat" value="N">Public Chat</label>
+    </div>
+    </div>
+    <div ng-if="ctrl.chat.isPrivateChat==='N'">
+    <div class="form-group">
+    <label class="control-label col-sm-2" for="chatName">Chat Topic :</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="chatName" placeholder="Enter chat Name"  ng-model="ctrl.chat.chatTopic">
+    </div>
+  </div>
+  </div>
+  <div class="form-group"> 
+    <div class="col-sm-offset-2 col-sm-10">
+	<input type="submit" value="Create Chat">
+	</div>
+	</div>
+</form>
+</center>
+</div>

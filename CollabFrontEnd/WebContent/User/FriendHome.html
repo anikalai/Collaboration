@@ -1,0 +1,16 @@
+<div ng-include="'Common/CommonHeader.html'"></div>
+<div ng-controller="UserController as ctrl">
+<div class="row">
+<div class="col-sm-4">
+<button type="button" class="btn btn-success" ng-click="ctrl.getCurrentUserFriend()">View Friends</button>
+
+<button type="button" class="btn btn-success" ng-click="ctrl.getAllUsers()">Add friends</button>
+
+<button type="button" class="btn btn-success" ng-click="ctrl.getFriendRequests()">View Friend Requests</button>
+</div>
+</div>
+<br/>
+<!-- <div ng-controller="ChatController as cctrl">
+<button type="button" class="btn btn-warning" ng-click="cctrl.getPrivateChats()">View Private Chats</button>
+</div> -->
+</div>

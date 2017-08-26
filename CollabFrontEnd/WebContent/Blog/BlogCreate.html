@@ -1,0 +1,28 @@
+<div ng-include="'Blog/BlogHome.html'"></div>
+<div ng-controller="BlogController as btrl">
+<center>
+<form ng-submit="btrl.createBlog()" class="form-horizontal">
+<div class="form-group">
+    <label class="control-label col-sm-2" for="blogName">Blog Name :</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="blogName" placeholder="Enter blog Name"  ng-model="btrl.blog.blogName">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="blogDesc">Blog Description :</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="blogDesc" placeholder="Enter blog Name"  ng-model="btrl.blog.blogDescription">
+    </div>
+  </div>
+  <div class="form-group">
+  	<label for="blogData">Write Blog:</label>
+  	<textarea class="form-control" rows="20" id="blogData" ng-model="btrl.blog.blogData"></textarea>
+  </div>
+  <div class="form-group"> 
+    <div class="col-sm-offset-2 col-sm-10">
+	<input type="submit" value="Create Blog">
+	</div>
+	</div>
+</form>
+</center>
+</div>

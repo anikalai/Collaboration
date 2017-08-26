@@ -1,0 +1,24 @@
+<div ng-include="'Blog/BlogHome.html'"></div>
+<div ng-controller="BlogController as btrl">
+<div class="container">
+  <h2>Your Blogs</h2>
+  <table class="table table-hover table-bordered">
+    <thead>
+      <tr>
+        <th>Blog Name</th>
+        <th>Blog Description</th>
+        <th>View Blog</th>
+        <th>Remove Blog</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="x in blogs">
+        <td>{{x.blogName}}</td>
+        <td>{{x.blogDescription}}</td>
+        <td><button class="btn btn-default" ng-click='btrl.editBlog(x.blogID)'>Edit blog</button></td>
+        <td><button class="btn btn-danger" ng-click='btrl.deleteBlog(x.blogID)'>Delete Blog</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>

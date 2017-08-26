@@ -1,0 +1,9 @@
+<div ng-if="isAdmin">
+  <div ng-include="'Headers/AdminHeader.html'"></div>
+</div>
+<div ng-if="isUser">
+  <div ng-include="'Headers/UserHeader.html'"></div>
+</div>
+<div ng-if="notLogged">
+  <div ng-include="'Headers/DefaultHeader.html'"></div>
+</div>

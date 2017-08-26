@@ -1,0 +1,18 @@
+<nav class="navbar navbar-default">
+<div class="container-fluid">
+  <div class="navbar-header">
+     <a class="navbar-brand" href="#">GetConnected</a>
+  </div>
+  <ul class="nav navbar-nav">
+      <li class="active"><a href="#!/goUserHome">Home</a></li>
+      <li class="active"><a href="#!/goBlogHome">Blog</a></li>
+      <li class="active"><a href="#!/goForumHome">Forum</a></li>
+      <li class="active"><a href="#!/goChatHome">Chat</a></li>
+      <li class="active"><a href="#!/goJobHome">Job</a></li>
+      <li class="active"><a href="#!/goFriendHome">Friend</a></li>
+   </ul>
+   <div ng-controller="UserController as ctrl">
+    <button class="btn btn-danger navbar-btn" ng-click="ctrl.logout()">Logout</button>
+   </div>
+</div>
+</nav>
